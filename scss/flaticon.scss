@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?ef5a67246850aa1e8495a525b49b671c") format("truetype"),
+url("./flaticon.woff?ef5a67246850aa1e8495a525b49b671c") format("woff"),
+url("./flaticon.woff2?ef5a67246850aa1e8495a525b49b671c") format("woff2"),
+url("./flaticon.eot?ef5a67246850aa1e8495a525b49b671c#iefix") format("embedded-opentype"),
+url("./flaticon.svg?ef5a67246850aa1e8495a525b49b671c#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "clock": "\f101",
+    "money": "\f102",
+    "snap": "\f103",
+);
+
+.flaticon-clock:before {
+    content: map-get($flaticon-map, "clock");
+}
+.flaticon-money:before {
+    content: map-get($flaticon-map, "money");
+}
+.flaticon-snap:before {
+    content: map-get($flaticon-map, "snap");
+}
